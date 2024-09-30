@@ -1,11 +1,10 @@
 
-import {Button} from '@nextui-org/react'
+import Header from './_components/Header';
 
 export default function Home() {
   return (
-  <div>Start
-    <hr />
-    <Button>press</Button>
+  <div className='bg-[#cad3ff]'>
+    <Header/>
   </div>
   );
 }
