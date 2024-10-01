@@ -11,6 +11,7 @@ const Hero = () => {
         {/* child 1 start */}
         <div className='w-full md:w-1/2 '>
           <h1 className=' text-primary text-[1.5rem] w-full lg:text-[6rem] p-3  h-full md:text-[3.5rem] lg:leading-[7rem] md:leading-[3.5rem]  sm:leading-[2rem] sm:text-[2.5rem]' >Craft magical story for kids in a minute</h1>
+          <p className='text-[18px] pb-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aut fuga exercitationem vel alias modi ex hic voluptate velit temporibus quibusdam incidunt, quod cupiditate ducimus rem quae possimus ab dolorum laudantium. Quae quibusdam laborum quam, quas officiis quod voluptate eveniet quis obcaecati ipsam praesentium deleniti vel mollitia minus ad vero.</p>
           <Link href={'/create-story'}>
           <Button color='primary'>Create Story</Button>
           </Link>
