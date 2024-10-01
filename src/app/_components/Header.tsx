@@ -48,10 +48,10 @@ const Header = () => {
             <NavbarContent justify='end'>
                 <Button color='primary'>Get start</Button>
             </NavbarContent>
-            <NavbarMenu>
+            <NavbarMenu className='bg-primary-50'>
                 {MenuList.map((item, index) => (
-                    <NavbarMenuItem key={index}>
-                        <Link href={item.path}>
+                    <NavbarMenuItem key={index} className='gap-3 '>
+                        <Link href={item.path} className='hover:underline hover:text-black text-xl'>
                             {item.name}
                         </Link>
                     </NavbarMenuItem>
