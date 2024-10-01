@@ -29,7 +29,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <Navbar className='flex justify-center' maxWidth='full' onMenuOpenChange={setIsMenuOpen}>
+        <Navbar className='flex justify-center bg-[#cad3ff]' maxWidth='full' onMenuOpenChange={setIsMenuOpen}>
             <NavbarContent>
                 <NavbarMenuToggle className='sm:hidden' aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
                 <NavbarBrand>
