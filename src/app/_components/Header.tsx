@@ -46,7 +46,9 @@ const Header = () => {
                 ))}
             </NavbarContent>
             <NavbarContent justify='end'>
+                <Link href={'/get-story'}>
                 <Button color='primary'>Get start</Button>
+                </Link>
             </NavbarContent>
             <NavbarMenu className='bg-primary-50'>
                 {MenuList.map((item, index) => (
