@@ -5,8 +5,10 @@ import { Button } from '@nextui-org/react';
 import Logo from './../public/logo.jpg'
 import {  Navbar,   NavbarBrand,   NavbarContent,   NavbarItem,   NavbarMenuToggle,  NavbarMenu,  NavbarMenuItem} from "@nextui-org/navbar";
 import Link from 'next/link';
+import {useUser} from '@clerk/nextjs'
 
 const Header = () => {
+    const {user, isSignedIn} = useUser();
     const MenuList = [
         {
             name: 'Home',
@@ -47,7 +49,9 @@ const Header = () => {
             </NavbarContent>
             <NavbarContent justify='end'>
                 <Link href={'/get-story'}>
-                <Button color='primary'>Get start</Button>
+                <Button color='primary'>
+                    {isSignedIn ? 'Dashboard':'Get Start'}
+                    </Button>
                 </Link>
             </NavbarContent>
             <NavbarMenu className='bg-primary-50'>
