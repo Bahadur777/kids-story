@@ -5,12 +5,13 @@ import sideImage from '@/app/public/logo.jpg'
 
 export default function Page() {
   return (
-    <div className='grid grid-cols-1 md:grid-col-2'>
-      <div>
-        <Image src={sideImage} alt='side img' className='h-screen' ></Image>
+    <div className='grid md:grid-cols-2 gap-3 md:gap-2 '>
+      <div className='hidden md:block'>
+        <Image src={sideImage} alt='side img' height={700} width={1000} className=' h-screen '/>
       </div>
-      <div><SignUp />
-    </div>
+      <div className='flex justify-center order-first md:order-last'>
+        <SignUp/>
+      </div>
     </div>
   )
 }
