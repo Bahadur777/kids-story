@@ -28,8 +28,9 @@ const StoryType = () => {
         <div className='grid grid-cols-1 gap-2 justify-center justify-items-center md:grid-cols-3 sm:grid-cols-2 mt-4 md:gap-2 sm:gap-2'>
             {
                 OptionList.map((option, index)=>(
-                    <div key={index}>
-                      <Image src={option.imageUrl} alt={option.label} width={300} height={500} className='rounded-3xl'/>
+                    <div  className="relative "key={index}>
+                        <h2 className=' absolute  text-center text-white bottom-2 w-full'>{option.label}</h2>
+                      <Image src={option.imageUrl} alt={option.label} width={300} height={500} className='rounded-2xl h-[200px]'/>
                     </div>
                 ))
             }
