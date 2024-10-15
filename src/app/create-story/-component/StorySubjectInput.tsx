@@ -8,7 +8,7 @@ const StorySubjectInput = ({userSelection}:any) => {
       <label htmlFor="" className="font-extrabold">1. Subject of the story</label>
       <Textarea
         placeholder="Write the Subject of the story which you want to generate"
-        className=" mt-4 rounded-lg max-w-lg col-span-28"
+        className=" mt-4 rounded-lg max-w-lg col-span-28 "
         onChange={(e)=>userSelection({
             fieldValue:e.target.value,
             fieldName:"StorySubject"
