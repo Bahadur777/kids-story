@@ -9,37 +9,36 @@ export interface optionField{
     imageUrl:string,
     isFree:boolean
 }
-const StoryType = ({userSelection}:any) => {
+const AgeGroupe = ({userSelection}:any) => {
     const OptionList=[
         {
-            label:'Story book',
+            label:'0-2 Years',
             imageUrl:urlImg1,
             isFree:true
         },
         {
-            label:'bed Story',
+            label:'3-5 Years',
             imageUrl:urlImg2,
             isFree:true
         },
         {
-            label:'Educational',
+            label:'5-8 Years',
             imageUrl:urlImg3,
             isFree:true
         }
     ]
-
     const [selectedOption, setSelectedOption]= useState<string>()
     const userSelect=(option:optionField)=>{
         setSelectedOption(option.label)
         userSelection({
             fieldValue:option?.label,
-            fieldName:'storyType'
+            fieldName:'AgeGroup'
 
         })
     }
   return (
     <div>
-        <label htmlFor="" className='font-extrabold' >2. Story</label>
+        <label htmlFor="" className='font-extrabold' >3. Age group</label>
         <div className='grid grid-cols-1 gap-2 justify-center justify-items-center md:grid-cols-3 sm:grid-cols-2 mt-4 md:gap-2 sm:gap-2'>
             {
                 OptionList.map((option, index)=>(
@@ -56,4 +55,4 @@ const StoryType = ({userSelection}:any) => {
   )
 }
 
-export default StoryType
+export default AgeGroupe
