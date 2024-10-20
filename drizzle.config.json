@@ -1,0 +1,10 @@
+{
+    "out": "./migrations",
+    "schema": "./src/config/schema.ts",
+    "connection": {
+      "host": "localhost",
+      "port": 5432
+    },
+    "dialect": "postgresql" 
+  }
+  

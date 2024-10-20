@@ -1,0 +1,70 @@
+{
+  "id": "bbbf1cdc-e135-4ca4-9388-9a258b70fac4",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.storyData": {
+      "name": "storyData",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "StorySubject": {
+          "name": "StorySubject",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "StoryType": {
+          "name": "StoryType",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ageGroup": {
+          "name": "ageGroup",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "imageStyle": {
+          "name": "imageStyle",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "output": {
+          "name": "output",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "coverImage": {
+          "name": "coverImage",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
