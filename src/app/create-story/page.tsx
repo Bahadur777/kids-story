@@ -1,10 +1,15 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import StorySubjectInput from './-component/StorySubjectInput'
 import StoryType from './-component/StoryType'
 import AgeGroupe from './-component/AgeGroupe'
 import ImageStyle from './-component/ImageStyle'
 import { Button } from '@nextui-org/react'
+import { chatSession } from '../GeminiAi'
+
+
+
+const CREATE_STORY_PROMPT = process.env.NEXT_PUBLIC_CREATE_STORY_PROMPT;
 
 export interface fieldData{
   fieldName:string,
@@ -28,6 +33,21 @@ const CreateStory = () => {
        console.log(formData)
   }
   const [formData, setFormData] =useState<fromDataType>();
+  const GenerateStory=async()=>{
+    const FINAL_PROMPT=CREATE_STORY_PROMPT?.replace('{ageGroup',formData?.ageGroup??'')
+    .replace('{storyType',formData?.storyType?? '')
+    .replace('{storySubject',formData?.storySubject?? '')
+    .replace('{imageStyle',formData?.imageStyle?? '')
+
+      //Generate AI Story
+      try{
+        const result = await chatSession.sendMessage(FINAL_PROMPT);
+        const responseText = await result.response.text();
+       console.log(responseText);
+      } catch(e){
+           console.log(e);
+      }
+  }
   return (
     <div className='p-10 md:px-20 lg:px-40 bg-[#cad3ff]'>
       <div>
@@ -46,7 +66,7 @@ const CreateStory = () => {
         </div>
       </div>
       <div className='flex justify-end mt-10'>
-        <Button color='primary' className=' p-7 text-2xl'>Generate story</Button>
+        <Button onClick={GenerateStory} color='primary' className=' p-7 text-2xl'>Generate story</Button>
       </div>
     </div>
   )
