@@ -5,7 +5,7 @@ import StoryType from './-component/StoryType'
 import AgeGroupe from './-component/AgeGroupe'
 import ImageStyle from './-component/ImageStyle'
 import { Button } from '@nextui-org/react'
-import { chatSession } from '../GeminiAi'
+import { chatSession } from '../../config/GeminiAi'
 
 
 
@@ -33,6 +33,7 @@ const CreateStory = () => {
        console.log(formData)
   }
   const [formData, setFormData] =useState<fromDataType>();
+  
   const GenerateStory=async()=>{
     const FINAL_PROMPT=CREATE_STORY_PROMPT?.replace('{ageGroup',formData?.ageGroup??'')
     .replace('{storyType',formData?.storyType?? '')
